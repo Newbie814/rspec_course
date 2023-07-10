@@ -6,5 +6,9 @@ RSpec.describe 'not_to method' do
     expect([1, 2, 3]).not_to be_empty
     expect(nil).not_to be_truthy
     expect('Philadelphia').not_to start_with('car')
+    expect('Philadelphia').not_to end_with('city')
+    expect(5).not_to respond_to(:length)
+    expect([:a, :b, :c]).not_to include(:d)
+    expect({ a: 1, b: 2, c: 3 }).not_to include(:d)
   end
 end
